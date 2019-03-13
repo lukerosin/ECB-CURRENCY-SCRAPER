@@ -1,0 +1,12 @@
+<table>
+    <tr>
+    	<th>Date Published</th>
+        <th>Rate</th>
+    </tr>
+    % for item in rate:
+    <tr>
+		<td>{{rate['pub_date']}}</td>
+    	<td>{{rate['rate']}}</td>
+    </tr>
+    % end
+</table>

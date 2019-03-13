@@ -16,6 +16,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+from currencies import views
+
 urlpatterns = [
+    path('', views.index, name='index'),
+    path('history/<str:name>', views.history, name='history'),
     path('admin/', admin.site.urls),
 ]

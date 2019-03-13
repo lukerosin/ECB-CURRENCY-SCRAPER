@@ -1,0 +1,12 @@
+<table>
+    <tr>
+    	<th>Currency Name</th>
+    </tr>
+    {% for currency in currency_list %}
+    <tr>
+		<td>
+            <a href="{% url 'index' currency.name %}"></a>{{ currency }}
+        </td>
+    </tr>
+    {% endfor %}
+</table>
