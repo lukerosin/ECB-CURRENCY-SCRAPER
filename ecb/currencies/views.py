@@ -4,11 +4,11 @@ from .models import Currency, History
 
 
 def index(request):
-    currency_list = Currency.objects.all()
-    context = {'currency_list': currency_list}
+    currencies = Currency.objects.all()
+    context = {'currencies': currencies}
     return render(request, 'currencies/index.html', context)
 
 
-def history(request, name):
-    rate_list = get_list_or_404(History, pk=name)
-    return render(request, 'currencies/history.html', {'rate': rate_list})
+def history(request, currency_id):
+    history = get_list_or_404(History, pk=currency_id)
+    return render(request, 'currencies/history.html', {'history': history})

@@ -1,0 +1,56 @@
+body {
+    font-family: sans-serif;
+    font-size: .7em;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid #848484;
+}
+
+tr:hover {
+    background-color: #F5ECCE;
+}
+
+th, td {
+    padding: .2em .8em;
+    text-align: left;
+}
+
+.also_in {
+    max-width: 28em;
+}
+
+span {
+    display: inline-block;
+    padding: .06em .5em;
+}
+
+span span {
+    font-weight: bold;
+}
+
+th.excel-columns {
+    border-top: 3px solid #236F41;
+}
+
+.excel-columns:first-child {
+    border-left: 3px solid #236F41;
+}
+
+.excel-columns:nth-child(5) {
+    border-right: 3px solid #236F41;
+}
+
+tr:last-child .excel-columns {
+    border-bottom: 3px solid #236F41;
+}
+
+pre {
+    font-family: sans-serif;
+    text-align: left;
+    line-height: .8em;  
+}

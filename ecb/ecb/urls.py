@@ -20,6 +20,6 @@ from currencies import views
 
 urlpatterns = [
     path('', views.index, name='index'),
-    path('history/<str:name>', views.history, name='history'),
+    path('<int:currency_id>/history', views.history, name='history'),
     path('admin/', admin.site.urls),
 ]

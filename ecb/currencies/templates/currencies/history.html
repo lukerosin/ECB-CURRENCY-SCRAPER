@@ -1,12 +1,25 @@
-<table>
-    <tr>
-    	<th>Date Published</th>
-        <th>Rate</th>
-    </tr>
-    % for item in rate:
-    <tr>
-		<td>{{rate['pub_date']}}</td>
-    	<td>{{rate['rate']}}</td>
-    </tr>
-    % end
-</table>
+{% extends 'currencies/base.html' %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>{% block title %}Currency history{% endblock %}</title>
+</head>
+<body>
+    {% block pagecontent %}
+        <table>
+            <tr>
+                <th>Date Published</th>
+                <th>Rate</th>
+            </tr>
+            {% for item in history %}
+            <tr>
+                <td>{{item.pub_date}}</td>
+                <td>{{item.rate}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    {% endblock %}
+</body>
+</html>

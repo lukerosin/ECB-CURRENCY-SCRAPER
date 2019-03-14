@@ -1,12 +1,26 @@
-<table>
-    <tr>
-    	<th>Currency Name</th>
-    </tr>
-    {% for currency in currency_list %}
-    <tr>
-		<td>
-            <a href="{% url 'index' currency.name %}"></a>{{ currency }}
-        </td>
-    </tr>
-    {% endfor %}
-</table>
+{% extends 'currencies/base.html' %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>{% block title %}Currencies{% endblock %}</title>
+</head>
+<body>
+    {% block pagecontent %}
+        <table>
+            <tr>
+                <th class="excel-columns">Currency Name</th>
+            </tr>
+            {{currency_names}}
+            {% for currency in currencies %}
+            <tr>
+                <td>
+                    <a href="{% url 'history' currency.id %}">{{ currency.name }}</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </table>
+    {% endblock %}
+</body>
+</html>
