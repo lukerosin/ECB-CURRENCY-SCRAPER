@@ -4,7 +4,7 @@ import sqlite3
 import requests
 import urllib.request
 
-DATABASE = "db.sqlite3"
+DATABASE = "ecb/db.sqlite3"
 
 conn = sqlite3.connect(DATABASE)
 conn.row_factory = sqlite3.Row
