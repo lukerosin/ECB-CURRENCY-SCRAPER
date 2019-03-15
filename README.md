@@ -8,10 +8,9 @@ to a particular currency. All data are presented in the endpoint implemented usi
 
 ## First start-up
 * clone repository to your local directory
-* run ecb\manage.py makemigrations currencies
 * run ecb\manager.py migrate
-* run ecb\currency_scraper.py
 * run ecb\manage.py runserver
+* run ecb\currency_scraper.py
 * open http://127.0.0.1:8000/ in your web browser
  
 #### Updating database 
