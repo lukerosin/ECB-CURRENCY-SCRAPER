@@ -14,5 +14,5 @@ class Currency(models.Model):
 
 class History(models.Model):
     currency = models.ForeignKey(Currency, on_delete=models.CASCADE)
-    pub_date = models.DateTimeField('date published')
+    pub_date = models.CharField('date published', max_length=10)
     rate = models.CharField(max_length=10)

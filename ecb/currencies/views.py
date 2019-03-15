@@ -1,4 +1,3 @@
-from django.http import Http404
 from django.shortcuts import render, get_object_or_404, get_list_or_404
 from .models import Currency, History
 
@@ -10,5 +9,5 @@ def index(request):
 
 
 def history(request, currency_id):
-    history = get_list_or_404(History, pk=currency_id)
+    history = get_list_or_404(History.objects.filter(currency_id=currency_id).order_by('-pub_date'))
     return render(request, 'currencies/history.html', {'history': history})

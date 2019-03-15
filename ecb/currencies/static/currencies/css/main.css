@@ -20,19 +20,6 @@ th, td {
     text-align: left;
 }
 
-.also_in {
-    max-width: 28em;
-}
-
-span {
-    display: inline-block;
-    padding: .06em .5em;
-}
-
-span span {
-    font-weight: bold;
-}
-
 th.excel-columns {
     border-top: 3px solid #236F41;
 }
@@ -47,10 +34,4 @@ th.excel-columns {
 
 tr:last-child .excel-columns {
     border-bottom: 3px solid #236F41;
-}
-
-pre {
-    font-family: sans-serif;
-    text-align: left;
-    line-height: .8em;  
 }
