@@ -6,6 +6,12 @@ currency_scraper.py module fetches all RSS channels bound with a particular curr
 Data containing currencies conversion rates and it's published dates are stored in databased in relation 
 to a particular currency. All data are presented in the endpoint implemented using Django technology.
 
+## Prerequisitis
+* Django
+* re
+* requests
+* urllib3
+
 ## First start-up
 * clone repository to your local directory
 * run ecb\manager.py migrate

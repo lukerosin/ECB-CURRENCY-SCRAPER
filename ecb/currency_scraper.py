@@ -1,6 +1,5 @@
 import re
 import sqlite3
-
 import requests
 import urllib.request
 
